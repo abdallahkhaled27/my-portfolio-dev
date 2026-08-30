@@ -20,11 +20,11 @@ export function Navbar() {
           {navigation.map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-slate-400 transition hover:text-white focus:outline-none focus:text-white">{item}</a>)}
         </div>
         <div className="flex items-center gap-2">
-          <a href="/FullStack.pdf" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-lg bg-white px-3.5 py-2 text-xs font-semibold text-slate-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-300 sm:flex"><Download className="h-3.5 w-3.5" /> Download CV</a>
+          <a href="/SW.pdf" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-lg bg-white px-3.5 py-2 text-xs font-semibold text-slate-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-300 sm:flex"><Download className="h-3.5 w-3.5" /> Download CV</a>
           <button type="button" aria-label="Toggle navigation menu" aria-expanded={isOpen} onClick={() => setIsOpen((open) => !open)} className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal-300 md:hidden"><span className="flex w-4 flex-col gap-1"><i className={`block h-px w-4 bg-current transition ${isOpen ? "translate-y-[3px] rotate-45" : ""}`} /><i className={`block h-px w-4 bg-current transition ${isOpen ? "-translate-y-[3px] -rotate-45" : ""}`} /></span></button>
         </div>
       </nav>
-      {isOpen && <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-[#0a0e17]/95 p-2 shadow-2xl backdrop-blur-xl md:hidden">{navigation.map((item) => <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu} className="block rounded-xl px-4 py-3 text-sm text-slate-300 transition hover:bg-white/8 hover:text-white">{item}</a>)}<a href="/FullStack.pdf" target="_blank" rel="noreferrer" onClick={closeMenu} className="mt-1 flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950"><Download className="h-4 w-4" /> Download CV</a></div>}
+      {isOpen && <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-[#0a0e17]/95 p-2 shadow-2xl backdrop-blur-xl md:hidden">{navigation.map((item) => <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu} className="block rounded-xl px-4 py-3 text-sm text-slate-300 transition hover:bg-white/8 hover:text-white">{item}</a>)}<a href="/SW.pdf" target="_blank" rel="noreferrer" onClick={closeMenu} className="mt-1 flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950"><Download className="h-4 w-4" /> Download CV</a></div>}
     </header>
   );
 }
