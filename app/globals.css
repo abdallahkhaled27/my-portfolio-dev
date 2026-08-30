@@ -31,14 +31,6 @@ html { scroll-behavior: smooth; }
 
 .section-anchor { scroll-margin-top: 7rem; }
 
-.orb { filter: blur(1px); animation: drift 12s ease-in-out infinite alternate; }
-.orb-delayed { animation-delay: -5s; }
-
-@keyframes drift {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(18px, -24px, 0) scale(1.08); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
