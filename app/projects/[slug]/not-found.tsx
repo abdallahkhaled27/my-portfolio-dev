@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main className="grid min-h-screen place-items-center px-5"><div className="max-w-lg text-center"><p className="eyebrow">404 · Project not found</p><h1 className="mt-5 text-4xl font-medium tracking-[-.05em] text-white sm:text-5xl">This project page doesn&apos;t exist.</h1><p className="mt-5 leading-7 text-slate-400">The project may have moved, or the address may be incorrect.</p><Link href="/#projects" className="button-primary mt-8">Back to projects</Link></div></main>; }
