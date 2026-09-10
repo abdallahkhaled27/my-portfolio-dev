@@ -30,7 +30,7 @@ export const projects: Project[] = [
       { title: "Coordinating external services", description: "Payment, flight, hotel, email, and upload integrations are isolated behind backend routes and services with configuration validation and error handling." },
       { title: "Keeping a large API maintainable", description: "The backend separates HTTP handlers, business logic, middleware, schemas, and application errors instead of concentrating the system in route files." },
     ],
-    githubUrl: "https://github.com/abdallahkhaled27/Travel-Booking-System",
+    githubUrl: "https://github.com/abdallahkhaled27/JourneyJot",
   },
   {
     number: "02", slug: "helping-hands", title: "Helping Hands",
@@ -69,7 +69,33 @@ export const projects: Project[] = [
     workflow: [{ title: "Ask", description: "The client validates a football question and posts it to the NestJS API." }, { title: "Check freshness", description: "Football-specific patterns determine whether current information is required." }, { title: "Retrieve context", description: "Time-sensitive questions trigger a compact, sourced web-search briefing; timeless questions skip it." }, { title: "Generate", description: "The service combines the date, live context, question, and tactical instructions before returning the answer." }],
     features: ["Football-focused analysis", "Conditional live search", "Tactical system guidance", "Verified-fact and analysis separation", "Disclosure when live facts cannot be verified", "Client loading and error states", "Tested freshness classification"],
     challenges: [{ title: "Detecting stale knowledge risk", description: "A dedicated classifier recognizes language about current form, fixtures, injuries, transfers, statistics, and other changing topics." }, { title: "Failing safely", description: "If required live retrieval fails, the service directs the model to disclose the limitation instead of guessing." }, { title: "Keeping analysis specific", description: "The system prompt emphasizes relevant tactical concepts and direct answers rather than generic biographies." }],
-    githubUrl: "https://github.com/abdallahkhaled27/Simple-Football-AI",
+    githubUrl: "https://github.com/abdallahkhaled27/Football-AI-Assistant",
+  },
+  {
+    number: "04", slug: "airline-graph-rag-assistant", title: "Airline Graph-RAG Assistant",
+    description: "A grounded airline analytics assistant built around survey data, a Neo4j knowledge graph, and optional semantic retrieval.",
+    overview: "Airline Graph-RAG Assistant is a Streamlit application that combines airline survey analytics stored in Neo4j with optional semantic retrieval using embeddings.",
+    problem: "Airline survey data is easier to explore when structured relationships and relevant semantic context can be retrieved together without allowing generated answers to drift beyond the underlying data.",
+    implementation: [
+      "Built a Python importer that turns airline survey records into a Neo4j knowledge graph.",
+      "Added graph-backed analytics and optional semantic retrieval with cached embeddings.",
+      "Created a Streamlit interface for asking questions and exploring grounded results.",
+      "Kept external language models optional so the application can run in retrieval-only mode.",
+    ],
+    technologies: ["Python", "Neo4j", "RAG", "Embeddings", "Streamlit"],
+    workflow: [
+      { title: "Import survey data", description: "The importer reads airline survey records and creates the corresponding entities and relationships in Neo4j." },
+      { title: "Query the graph", description: "A question is matched to graph-backed analytics over flights, routes, fleets, and survey responses." },
+      { title: "Retrieve semantic context", description: "When enabled, embeddings retrieve additional relevant flight data for the question." },
+      { title: "Present grounded results", description: "The Streamlit interface displays an answer grounded in retrieved graph results, with external language models remaining optional." },
+    ],
+    features: ["Neo4j knowledge graph", "Airline survey analytics", "Optional semantic retrieval", "Cached embeddings", "Retrieval-only mode", "Streamlit interface"],
+    challenges: [
+      { title: "Grounding every response", description: "The retrieval pipeline keeps answers tied to graph results rather than relying on unsupported model knowledge." },
+      { title: "Supporting optional providers", description: "Semantic retrieval and external language-model providers can be selected when credentials are available without being required for graph analytics." },
+      { title: "Keeping embeddings current", description: "Cached embedding files are invalidated when the selected model or retrieved flight data changes." },
+    ],
+    githubUrl: "https://github.com/abdallahkhaled27/Airline-Graph-RAG-Assistant",
   },
 ];
 

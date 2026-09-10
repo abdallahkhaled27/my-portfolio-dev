@@ -6,9 +6,9 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: "Abdallah Khaled Abdelwahab | Full-Stack Engineer",
+  title: "Abdallah Khaled Youssef | Software Engineer | Full-Stack & AI",
   description:
-    "Full-Stack Engineer building modern, scalable web applications across the frontend and backend.",
+    "Software Engineer building complete products across the frontend, backend, and applied AI.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
