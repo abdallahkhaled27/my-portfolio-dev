@@ -6,9 +6,9 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: "Abdallah Khaled Youssef | Software Engineer | Full-Stack & AI",
+  title: "Abdallah Khaled Youssef | Data Engineer & Software Engineer",
   description:
-    "Software Engineer building complete products across the frontend, backend, and applied AI.",
+    "Mid-Level Data Engineer at MCDR (Misr El-Makasa), specializing in Oracle SQL, PL/SQL, ETL, and Power BI, with full-stack software and applied AI projects.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><a href="#main-content" className="skip-link">Skip to content</a><div id="main-content">{children}</div></body>
     </html>
   );
 }
